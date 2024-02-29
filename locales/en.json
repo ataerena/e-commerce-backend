@@ -1,0 +1,12 @@
+{
+    "auth": {
+        "login": {
+            "success": "Login successful!",
+            "invalid": "Invalid credentials!"
+        },
+        "register": {
+            "success": "Register successful!",
+            "exists": "User exists!"
+        }
+    }
+}

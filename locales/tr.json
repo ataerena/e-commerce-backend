@@ -1,0 +1,12 @@
+{
+    "auth": {
+        "login": {
+            "success": "Giriş başarılı!",
+            "invalid": "Geçersiz kullanıcı bilgileri!"
+        },
+        "register": {
+            "success": "Kayıt başarılı!",
+            "exists": "Kullanıcı mevcut!"
+        }
+    }
+}

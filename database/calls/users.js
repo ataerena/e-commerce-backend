@@ -61,11 +61,15 @@ const loginUser = async (req, res) => {
             return new Promise( (resolve) => {
                 bcrypt.compare(user_pwd, hashedUserPassword, async (err, result) => {
                     if (err) {
-                        resolve(false); // user exists but password is incorrect
+                        resolve(false); // internal error when comparing password - decryption failiure
                     } else {
                         const user_data = await client.query(GET_USER_BY_LOGIN, pwd_check);
-                        console.log(user_data.rows);
-                        resolve(user_data.rows[0]);
+                        
+                        if (result) {
+                            resolve(user_data.rows[0]);
+                        } else {
+                            resolve(false) // user exists but password is incorrect
+                        }
                     }
                 })
             })

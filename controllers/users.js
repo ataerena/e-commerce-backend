@@ -5,10 +5,10 @@ const createUser = async (req, res) => {
         const create_user = await db.createUser(req);
         
         if (!create_user) {
-            res.status(400).json({message: "User exists!"});
+            res.status(400).json({message: req.t("auth.register.exists")});
         } else {
             res.status(200).json({
-                message: "Register successful!",
+                message: req.t("auth.register.success"),
                 user_id: create_user[0].user_id
             });
         }
@@ -23,10 +23,10 @@ const loginUser = async (req, res) => {
 
         if (!user_data) {
             console.log(user_data);
-            res.status(400).json({message: "Invalid credentials!"});
+            res.status(400).json({message: req.t("auth.login.invalid")});
         } else {
             res.status(200).json({
-                message: "Login successful!",
+                message: req.t("auth.login.success"),
                 user_data: user_data
             })
         }
