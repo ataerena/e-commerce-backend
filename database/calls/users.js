@@ -22,7 +22,7 @@ const createUser = async (req, res) => {
             user_firstname = req.body.user_firstname, 
             user_lastname = req.body.user_lastname, 
             user_email = req.body.user_email, 
-            user_age = req.body.user_age, 
+            user_birth = req.body.user_birth,
             user_gender = req.body.user_gender, 
             user_country = req.body.user_country, 
             user_city = req.body.user_city, 
