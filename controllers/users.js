@@ -2,6 +2,17 @@ const db = require('../database/calls/users');
 
 const createUser = async (req, res) => {
     try {
+        for (const key in req.body) {
+            if (Object.hasOwnProperty.call(req.body, key)) {
+                const element = req.body[key];
+                if (!element) {
+                    res.status(400).json({message: req.t("auth.register.invalid_form")})
+                    return;
+                }
+            }
+        }
+
+
         const create_user = await db.createUser(req);
         
         if (!create_user) {

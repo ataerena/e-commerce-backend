@@ -6,7 +6,8 @@
         },
         "register": {
             "success": "Kayıt başarılı!",
-            "exists": "Kullanıcı mevcut!"
+            "exists": "Kullanıcı mevcut!",
+            "invalid_form": "Lütfen gerekli alanaları doldurun!"
         }
     }
 }

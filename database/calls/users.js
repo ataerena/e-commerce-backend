@@ -17,7 +17,7 @@ const createUser = async (req, res) => {
         const check_user_data = [
             user_email = req.body.user_email,
             username = req.body.username
-        ]
+        ];
         const user_data = [
             user_firstname = req.body.user_firstname, 
             user_lastname = req.body.user_lastname, 
@@ -30,7 +30,8 @@ const createUser = async (req, res) => {
             user_address = req.body.user_address,
             user_pwd = hashedUserPassword,
             username = req.body.username
-        ]
+        ];
+
         var client = await pool.connect();
         const check_user = await client.query(CHECK_USER_EXISTS, check_user_data);
         

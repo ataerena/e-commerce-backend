@@ -6,7 +6,8 @@
         },
         "register": {
             "success": "Register successful!",
-            "exists": "User exists!"
+            "exists": "User exists!",
+            "invalid_form": "Please fill the required fields!"
         }
     }
 }
